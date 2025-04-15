@@ -1,27 +1,37 @@
 package com.example.examinationservice.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ExaminationDto {
-    private String id;
     private String userId;
     private String diagnosis;
     private String survey;
     private String treatmentInstruction;
     private String prescription;
     private String report;
-
     private Double bodyTemperature;
     private Integer heartRate;
     private Integer respiratoryRate;
     private String bloodPressure;
     private LocalDateTime vitalSignsMeasuredAt;
 
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class VitalSignsDto {
+        private Double bodyTemperature;
+        private Integer heartRate;
+        private Integer respiratoryRate;
+        private String bloodPressure;
+    }
 }
