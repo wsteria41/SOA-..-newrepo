@@ -1,4 +1,14 @@
 package com.example.examinationservice.dto;
 
-public class ExaminationRequest {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+public class SurveyDto {
+    private String examinationId;
+    private String surveyData;
+
 }

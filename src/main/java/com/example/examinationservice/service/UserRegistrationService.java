@@ -1,4 +1,7 @@
 package com.example.examinationservice.service;
 
-public class ExaminationService {
+import com.example.examinationservice.dto.UserDto;
+
+public interface UserRegistrationService {
+    String register(UserDto dto);
 }
